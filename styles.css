@@ -1,0 +1,205 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a; /* Azul oscuro */
+    color: #f0f0f0; /* Texto gris claro */
+}
+
+.app-container {
+    display: flex; /* Flexbox para alinear los contenedores */
+    padding: 20px; /* Espaciado alrededor */
+}
+
+.menu-container {
+    width: 200px; /* Ancho fijo para el menú */
+    margin-right: 20px; /* Espacio entre el menú y el formulario */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo con opacidad */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.menu-container ul {
+    list-style-type: none; /* Quitar viñetas de la lista */
+    padding: 0; /* Quitar padding de la lista */
+}
+
+.menu-container li {
+    margin: 10px 0; /* Espaciado entre elementos de la lista */
+    color: #ffffff; /* Texto blanco */
+}
+
+.form-container {
+    flex-grow: 1; /* Permite que el formulario use el espacio restante */
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo con opacidad */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(238, 237, 237);
+    border-radius: 8px;
+}
+
+.form-container h1 {
+    margin-bottom: 20px; /* Espaciado inferior del título */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centrar el título */
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Ajusta el ancho de los campos */
+    margin: 0 auto; /* Centrar horizontalmente los campos */
+}
+
+.field-container label {
+    color: #ffffff; /* Títulos de campos en blanco */
+    text-align: center; /* Centrar texto de etiquetas */
+}
+
+.historial-container {
+    margin-left: 20px; /* Espacio entre el formulario y el historial */
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo con opacidad */
+    padding: 15px; /* Ajuste de padding */
+    box-shadow: 0 4px 8px rgb(238, 237, 237);
+    border-radius: 8px;
+    flex-basis: 250px; /* Ancho reducido del historial */
+}
+
+.historial-container h2 {
+    margin-bottom: 15px; /* Espaciado inferior del título */
+    color: #ffffff; /* Texto blanco */
+}
+
+.historial-container table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+}
+
+.historial-container th, .historial-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Centrar texto en celdas */
+    color: #ffffff; /* Texto blanco */
+}
+
+.historial-container th {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco con opacidad */
+}
+
+button {
+    background-color: #38a169;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2f855a;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px; /* Ajustar el padding */
+    margin: 8px 0; /* Ajustar el margen */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco con opacidad del 10% para un efecto sutil */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centrar texto en los campos */
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="date"], 
+select {
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total del elemento */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .app-container {
+        flex-direction: column; /* Apilar contenedores en pantallas pequeñas */
+        padding: 10px; /* Espaciado reducido */
+    }
+
+    .menu-container {
+        margin-right: 0; /* Elimina margen derecho en pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio inferior entre menú y formulario */
+    }
+
+    .form-container, .historial-container {
+        width: 100%; /* Contenedores ocupan todo el ancho */
+        margin-left: 0; /* Elimina margen izquierdo */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+
+    button {
+        font-size: 0.9em; /* Ajusta el tamaño de los botones */
+        padding: 8px 16px; /* Reduce el padding de los botones */
+    }
+
+    input, select {
+        padding: 6px; /* Ajusta el padding de los campos de texto */
+    }
+
+    .historial-container h2 {
+        font-size: 1.5em;
+    }
+
+    .historial-container th, .historial-container td {
+        padding: 6px; /* Ajusta el padding de las celdas en la tabla */
+    }
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco con opacidad del 10% */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login-container h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco con opacidad del 10% */
+    color: #ffffff; /* Texto blanco */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.login-container button:hover {
+    background-color: #2f855a;
+}
